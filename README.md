@@ -1,4 +1,4 @@
-##Proyecto fraude 
+## Proyecto fraude 
 ---
 El siguiente trabajo consiste en realizar el proyecto final de la materia de Machine Learning. 
 En este, se nos presenta un problema que requiere elegir un modelo de Machine Learning para realizar predicciones 
