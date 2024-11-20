@@ -9,7 +9,8 @@ from scipy import stats
 from scipy.stats import norm, skew
 
 # Función para inicializar el modelo Random Forest
-def random_forest(n_estimators=100, max_depth=None, random_state=42):
+
+def random_forest(n_estimators=100, max_depth=7, random_state=42, max_features='sqrt', min_samples_leaf=1, min_samples_split=2,class_weight='balanced'):
     """
     Inicializa un modelo RandomForestClassifier con los parámetros especificados.
 
@@ -29,7 +30,14 @@ def random_forest(n_estimators=100, max_depth=None, random_state=42):
     RandomForestClassifier
         Instancia del modelo Random Forest.
     """
-    rforest = RandomForestClassifier(n_estimators=n_estimators, max_depth=max_depth, random_state=random_state)
+    rforest = RandomForestClassifier(
+        n_estimators=n_estimators,
+        max_depth=max_depth,
+        random_state=random_state,
+        max_features=max_features,
+        min_samples_leaf=min_samples_leaf,
+        min_samples_split=min_samples_split
+    )
     return rforest
 
 # Función para entrenar el modelo
