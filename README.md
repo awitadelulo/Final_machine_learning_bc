@@ -1,4 +1,4 @@
-## Proyecto fraude 
+# Proyecto fraude 
 ---
 El siguiente trabajo consiste en realizar el proyecto final de la materia de Machine Learning. 
 En este, se nos presenta un problema que requiere elegir un modelo de Machine Learning para realizar predicciones 
@@ -6,7 +6,7 @@ sobre una base de datos que no cuenta con nombres en las características (featu
 El contenido de esta base de datos está relacionado con registros de fraudes en línea.
 
 --- 
-1. Entrenamiento del modelo.
+## 1. Entrenamiento del modelo.
 
 Para abordar este problema, se decidió utilizar el modelo **XGBoost** debido a sus características avanzadas y 
 su capacidad para manejar datos desbalanceados de manera eficiente. **XGBoost (Extreme Gradient Boosting)** es un modelo de aprendizaje 
@@ -35,11 +35,13 @@ Entre las razones principales para su elección destacan:
 
    esto esta mas explicado a detalle en el siguiente link que es elink del notebook dentro del Github [Final_machine_learning_jhonatan.ipynb](https://github.com/awitadelulo/Final_machine_learning_bc/blob/master/Final_machine_learning_jhonatan.ipynb)
 ---
-2. servidor local
+## 2. servidor local
+
 Creamos un entorno con conda he instalamos python 3.7, y instalamos las dependencias necesarias.
-$   conda create -n Apifraude
-$   conda activate Apifraude
-$   conda install python=3.9
-$   pip install -r requirements.txt
-$   streamlit run app.py
+
+      $   conda create -n Apifraude
+      $   conda activate Apifraude
+      $   conda install python=3.9
+      $   pip install -r requirements.txt
+      $   streamlit run app.py
 
