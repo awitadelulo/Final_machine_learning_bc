@@ -45,3 +45,6 @@ Creamos un entorno con conda he instalamos python 3.7, y instalamos las dependen
       $   pip install -r requirements.txt
       $   streamlit run app.py
 
+## 3. Link para ir a la web
+https://calm-mariner-442400-d9.uc.r.appspot.com/
+
