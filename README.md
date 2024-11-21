@@ -1,4 +1,6 @@
 # Proyecto fraude 
+
+Link para las diapositivas: https://www.canva.com/design/DAGXFJ4zYJA/sNG0uMvTNuqHkGE0ZF93TQ/view?utm_content=DAGXFJ4zYJA&utm_campaign=designshare&utm_medium=link&utm_source=editor
 ---
 El siguiente trabajo consiste en realizar el proyecto final de la materia de Machine Learning. 
 En este, se nos presenta un problema que requiere elegir un modelo de Machine Learning para realizar predicciones 
