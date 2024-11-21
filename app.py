@@ -31,13 +31,33 @@ def main():
     # Entrada de datos
     st.write("Ingrese los valores para las características:")
     feature_labels = [
-        "a", "b", "d", "e", "f", "g", "h", "i", 
+        "a", "b", "c","d", "e", "f", "g", "h", "i","j","k", 
         "l", "m", "n", "o", "p", "q", "r", "s", "monto"
     ]
     inputs = []
+    
+    inputs = []
+    j_value = None  # Variable para almacenar el valor de "j"
+    
     for label in feature_labels:
-        value = st.text_input(f"{label}:")
-        inputs.append(value)
+        value = st.text_input(f"{label} :")
+        
+        # Validación específica para "j", debe ser un string, no un número
+        if label == "j":
+            # Verificar si el valor ingresado no es un número
+            if value.replace('.', '', 1).isdigit() and value.count('.') <= 1:
+                st.error("El valor para 'j' no puede ser un número. Por favor ingrese un texto.")
+                j_value = None  # Reseteamos el valor de "j"
+            else:
+                j_value = value  # Asignamos el valor de "j" si es correcto
+        else:
+            inputs.append(value)
+    
+    # Incluir el valor de "j" si fue ingresado correctamente
+    if j_value is not None:
+        inputs.insert(feature_labels.index("j"), j_value)
+    
+    inputs = [value for label, value in zip(feature_labels, inputs) if label not in ["c", "j", "k"]]
 
     # Botón de predicción
     if st.button("Realizar Predicción"):
@@ -48,6 +68,7 @@ def main():
             prediction = model_prediction(x_in, model)
             mensaje=mensaje_traductor(prediction[0])
             st.success(f"El resultado de la predicción es: {mensaje.upper()}")
+        
         except ValueError:
             st.error("Por favor, ingrese solo valores numéricos válidos.")
 
